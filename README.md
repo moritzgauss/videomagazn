@@ -1,1 +1,1 @@
-# videomagazn
+# magzin
