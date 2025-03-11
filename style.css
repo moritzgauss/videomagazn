@@ -1,4 +1,3 @@
-
 /* Reset and base styles */
 * {
     margin: 0;
@@ -100,6 +99,16 @@ body {
     position: relative;
     overflow: hidden;
     background-color: white;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.page.flip {
+    animation: page-flip 0.6s forwards;
+}
+
+.page.flip-back {
+    animation: page-flip-back 0.6s forwards;
 }
 
 .left-page {
@@ -263,5 +272,23 @@ body {
 
     .page-content h2 {
         font-size: 1.5rem;
+    }
+}
+
+@keyframes page-flip {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(-180deg);
+    }
+}
+
+@keyframes page-flip-back {
+    0% {
+        transform: perspective(1000px) rotateY(-180deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
     }
 }
