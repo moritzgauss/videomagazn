@@ -260,35 +260,3 @@ body {
 @media (max-width: 768px) {
     .magazine-cover, .page {
         padding: 20px;
-    }
-
-    .cover-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .cover-content .tagline {
-        font-size: 1.2rem;
-    }
-
-    .page-content h2 {
-        font-size: 1.5rem;
-    }
-}
-
-@keyframes page-flip {
-    0% {
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(-180deg);
-    }
-}
-
-@keyframes page-flip-back {
-    0% {
-        transform: perspective(1000px) rotateY(-180deg);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(0deg);
-    }
-}
